@@ -122,8 +122,7 @@ async fn process_tx_update(transaction_pretty: TransactionPretty) -> anyhow::Res
     let instructions = parse_instruction(logs)?;
 
     for token_info in instructions {
-        println!("New Pumpfun Launch: {:?}", token_info);
-        // Print to console
+        // print to console
         println!(
             "New Pumpfun Launch:\n\
         Token Address: {}\n\
