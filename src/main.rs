@@ -131,7 +131,7 @@ async fn process_tx_update(transaction_pretty: TransactionPretty) -> anyhow::Res
         Symbol: {}\n\
         Owner: {}\n\
         Slot: {}\n\
-        ---",
+        ",
             token_info.mint,
             token_info.bonding_curve,
             token_info.name,
@@ -141,6 +141,7 @@ async fn process_tx_update(transaction_pretty: TransactionPretty) -> anyhow::Res
         );
 
         append_to_json_file(&token_info)?;
+        println!("---");
     }
 
     Ok(())
